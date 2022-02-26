@@ -1,0 +1,116 @@
+body {
+    background-color: #333;
+    color: #9F9;
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    flex:0;
+    font-size:32px
+
+}
+.lives{
+    display: flex;
+}
+.life{
+    background: url("../img/emmet.png");
+    height: 38px;
+    width: 24px;
+    margin-right: 5px;
+    background-size: contain;
+}
+.title {
+    flex:1
+}
+.level {
+    margin:0px 10px;
+}
+.emmet img {
+    width:96px;
+    right: 50px;
+}
+.emmet {
+    width:96px;
+    z-index: 1;
+    position:absolute;
+    right: 50px;
+    top:0px;
+    transition: top 0.1s;
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+@keyframes pulsing {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.2;
+    }   
+    100%{
+        opacity: 1;
+    }
+}
+.stud{
+    background-color: red;
+    border-radius: 50%;
+    width:16px;
+    z-index: 3;
+    left:0px;
+    height: 16px;
+    position: absolute;
+    transform: rotate(360deg);
+    animation: rotating 1s linear infinite;
+}
+
+#main {
+    height:100%;    
+    width:100%; 
+    position: relative;
+    flex:1;
+}
+.emmet .nuts {
+    border-radius: 50%;
+    height:36px;
+    width:36px;
+    background-color: yellow;
+    position: absolute;
+    margin-top: 85px;
+    z-index: 2;
+    margin-left: 30px;
+    animation: pulsing 4s linear infinite;
+    
+}
+.emmet .nuts2{
+    background-color: blue;
+    height:24px;
+    width: 24px;
+    position: absolute;
+    top:6px;
+    left:6px;
+    border-radius: 50%;
+}
+
+.emmet .nuts3{
+    background-color: red;
+    height:12px;
+    width:12px;
+    position: absolute;
+    top:6px;
+    left:6px;
+    border-radius: 50%;
+}
