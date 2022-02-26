@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		
+		{
+			"label": "webpack web producer",
+			"group": "build",
+			"isBackground": true,
+			"command": "./node_modules/webpack/bin/webpack.js",
+			"options": {
+				"cwd": "${workspaceFolder}/client/",
+				"env": {
+					"out": "producer",
+					"target": "web"
+				}
+			},
+			"problemMatcher": {
+				"owner": "webpack",
+				"severity": "error",
+				"fileLocation": "relative",
+				"pattern": [
+					{
+						"regexp": "ERROR in (.*)",
+						"file": 1
+					},
+					{
+						"regexp": "\\((\\d+),(\\d+)\\):(.*)",
+						"line": 1,
+						"column": 2,
+						"message": 3
+					}
+				]
+			}
+		}
+	]
+}
