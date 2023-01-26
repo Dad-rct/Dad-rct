@@ -1,12 +1,11 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		
 		{
 			"label": "webpack web producer",
 			"group": "build",
 			"isBackground": true,
-			"command": "./node_modules/webpack/bin/webpack.js",
+			"command": "./node_modules/.bin/webpack",
 			"options": {
 				"cwd": "${workspaceFolder}/client/",
 				"env": {
