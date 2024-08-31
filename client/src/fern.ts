@@ -222,6 +222,7 @@ function start() {
                 redraw();
             }
         },
+
         setDepth: (e: Event) => {
             if (e.target instanceof HTMLInputElement) {
                 maxDepth = parseInt(e.target.value);
