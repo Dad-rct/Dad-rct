@@ -2141,7 +2141,7 @@ let sizeReducerLeft = 0.6;
 let sizeReducerRight = 0.6;
 const canvasHeight = 820;
 const canvasWidth = 1180;
-const maxDepth = 11;
+let maxDepth = 11;
 const startSize = 200;
 let startColor = rgbaFromHex("#783C00");
 let endColor = rgbaFromHex("#008800");
@@ -2323,7 +2323,7 @@ function start() {
         },
         setThickness: (e) => {
             if (e.target instanceof HTMLInputElement) {
-                initialWidth = widthDecreaseRatio * parseInt(e.target.value, 10);
+                initialWidth = parseInt(e.target.value, 10);
                 redraw();
             }
         },
@@ -2336,6 +2336,12 @@ function start() {
         setTaper: (e) => {
             if (e.target instanceof HTMLInputElement) {
                 widthDecreaseRatio = parseInt(e.target.value) / 2;
+                redraw();
+            }
+        },
+        setDepth: (e) => {
+            if (e.target instanceof HTMLInputElement) {
+                maxDepth = parseInt(e.target.value);
                 redraw();
             }
         },
