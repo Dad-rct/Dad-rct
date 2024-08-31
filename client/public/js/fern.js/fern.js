@@ -2189,7 +2189,7 @@ function start() {
     const start = (coordinates) => {
         const [x, y] = coordinates;
         [leftHandle, rightHandle].forEach(circle => {
-            if (circle && isIntersect([x, y], [...circle, handleRadius])) {
+            if (circle && isIntersect([x, y], [...circle, handleRadius * 4])) {
                 if (circle === leftHandle)
                     movingChild = { type: "left", offset: [x - circle[0], y - circle[1]] };
                 else
