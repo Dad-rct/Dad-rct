@@ -98,7 +98,6 @@ const animateframe = (ts: number) => {
         stud.left = left + pixels
         element.style.left = Math.floor(stud.left) + "px";
         //check for collision with emmet
-
         const emmetRect = emmetElement.getBoundingClientRect()
         const studRect = element.getBoundingClientRect()
         const emmetBallsRect = emmetNutsElement.getBoundingClientRect()
@@ -126,7 +125,7 @@ const animateframe = (ts: number) => {
             stud.last_animate = ts
         }
     }
-        requestAnimationFrame(animateframe);
+    requestAnimationFrame(animateframe);
 }
 
 const newStud = () => {

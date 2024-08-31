@@ -11,8 +11,12 @@
 				"env": {
 					"out": "producer",
 					"target": "web"
-				}
+				},
 			},
+			"args": [
+				"-c",
+				"webpack.config.js"
+			],
 			"problemMatcher": {
 				"owner": "webpack",
 				"severity": "error",

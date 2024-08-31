@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mediapipe/face_mesh": "~0.4.1633559619",
+    "@mediapipe/selfie_segmentation": "~0.1.1675465747",
+    "@types/color": "^3.0.6",
+    "color": "^4.2.3",
     "ts-loader": "~8.2.0",
+    "typescript": "~5.0.4",
     "webpack": "~4.43.0",
     "webpack-cli": "~4.9.2"
   }

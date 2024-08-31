@@ -51,12 +51,12 @@ const Web = Object.assign({}, baseConfig, {
         extensions: [".mjs", ".ts", ".tsx", ".js"],
     },
     entry: {
-        fern: path.join(__dirname, "src", "fern.ts"),
+        video: path.join(__dirname, "src", "videoEffects", "VideoEffects.tsx"),
     },
 
     output: {
         publicPath: '../js/producer/',
-        path: path.resolve(buildRootPath, "fern.js"),
+        path: path.resolve(buildRootPath, "video.js"),
         hashFunction: "sha256"
     }
 });

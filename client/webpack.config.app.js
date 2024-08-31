@@ -51,12 +51,12 @@ const Web = Object.assign({}, baseConfig, {
         extensions: [".mjs", ".ts", ".tsx", ".js"],
     },
     entry: {
-        fern: path.join(__dirname, "src", "fern.ts"),
+        app: path.join(__dirname, "src", "app.ts"),
     },
 
     output: {
         publicPath: '../js/producer/',
-        path: path.resolve(buildRootPath, "fern.js"),
+        path: path.resolve(buildRootPath, "app.js"),
         hashFunction: "sha256"
     }
 });
